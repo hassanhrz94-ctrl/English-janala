@@ -1,83 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English janala | Best platfrom for learning English</title>
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <!-- font awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <!-- tailwind & daisy ui -->
-      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="stylesheet" href="style.css">
-<!-- font -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>English Janala</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="">
-    <!-- navbar -->
-     <header>
-        <div class="navbar bg-base-100 shadow-sm">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+<body class="bg-white text-gray-800">
+
+<!-- NAVBAR -->
+<nav class="navbar bg-white shadow-sm px-6 lg:px-20 sticky top-0 z-50">
+  <div class="flex-1 flex items-center gap-2">
+    <img src="https://api.dicebear.com/9.x/initials/svg?seed=EJ&backgroundColor=6C3FEB&fontFamily=Helvetica&fontSize=42&textColor=ffffff" class="w-9 h-9 rounded-full" alt="logo"/>
+    <span class="font-bold text-xl" style="color:#6C3FEB">English<span class="text-gray-800">Janala</span></span>
+  </div>
+  <div class="hidden lg:flex gap-8 text-sm font-medium">
+    <a href="#home" class="nav-link hover:text-purple-600">Home</a>
+    <a href="#vocabulary" class="nav-link hover:text-purple-600">Vocabulary</a>
+    <a href="#lessons" class="nav-link hover:text-purple-600">Lessons</a>
+    <a href="#faq" class="nav-link hover:text-purple-600">FAQ</a>
+  </div>
+  <div class="flex-none gap-3 ml-6">
+    <button class="btn btn-sm btn-ghost text-purple-700">Login</button>
+    <button class="btn btn-sm text-white" style="background:#6C3FEB">Get Started</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero-blob min-h-[88vh] flex items-center px-6 lg:px-20 py-16 overflow-hidden">
+  <div class="flex flex-col lg:flex-row items-center gap-12 w-full max-w-7xl mx-auto">
+    <div class="flex-1 fade-up">
+      <div class="badge badge-outline mb-4 text-purple-700 border-purple-300 bg-purple-50 px-4 py-3 text-xs font-semibold tracking-wide">🇧🇩 বাংলাদেশের #১ ইংরেজি শিক্ষা প্ল্যাটফর্ম</div>
+      <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+        <span style="color:#6C3FEB">English</span> is<br/>Easy!!
+      </h1>
+      <p class="text-gray-500 text-lg mb-8 max-w-md leading-relaxed">
+        Why are you afraid of English? Start learning with interactive lessons, vocabulary cards, and real-life conversations — designed for Bangladeshi learners.
+      </p>
+      <div class="flex gap-4 flex-wrap">
+        <button class="btn text-white px-8 py-3 text-base" style="background:#6C3FEB" onclick="document.getElementById('vocabulary').scrollIntoView({behavior:'smooth'})">
+          Start Learning →
+        </button>
+        <button class="btn btn-outline border-purple-300 text-purple-700 px-8 py-3 text-base" onclick="document.getElementById('demo-modal').showModal()">
+          Watch Demo ▶
+        </button>
       </div>
-      <ul
-        tabindex="-1"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li>
-        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</a>
-     </li>
-     <li>
-        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>LEARN</a>
-     </li>
-     <li>
-        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-right-from-bracket"></i>LOGOUT</a>
-     </li>>
-      </ul>
+      <div class="flex gap-8 mt-10 text-sm text-gray-500">
+        <div><span class="text-2xl font-bold text-gray-800">50K+</span><br/>Students</div>
+        <div class="border-l pl-8"><span class="text-2xl font-bold text-gray-800">200+</span><br/>Lessons</div>
+        <div class="border-l pl-8"><span class="text-2xl font-bold text-gray-800">4.9★</span><br/>Rating</div>
+      </div>
     </div>
-    <a class="flex items-center gap-1">
-        <span class="text-lg font-bold">English</span>
-        <img src="assets/logo.png" alt="">
-        <span class="font-bangla text-lg font-semibold">জানালা</span>
-    </a>
+    <div class="flex-1 flex justify-center fade-up-2">
+      <div class="hero-img-wrap rounded-full p-4 w-72 h-72 lg:w-96 lg:h-96 flex items-end justify-center overflow-hidden shadow-2xl" style="box-shadow:0 20px 60px rgba(108,63,235,0.25)">
+        <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=400&h=500&fit=crop&crop=top" class="w-full h-full object-cover rounded-full" alt="Teacher"/>
+      </div>
+    </div>
   </div>
-  <div class="navbar-end hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 space-x-4">
-     <li>
-        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</a>
-     </li>
-     <li>
-        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>LEARN</a>
-     </li>
-     <li>
-        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-right-from-bracket"></i>LOGOUT</a>
-     </li>
-    </ul>
-  </div>
-  
-</div>
-     </header>
-<!-- hero section -->
-<section class="flex flex-col-reverse md:flex-row gap-8 justify-between items-center py-5 w-11/12 mx-auto">
-<div class="content flex-1 text-center md:text-left">
-    <h2 class="text-4xl font-bold mb-8" ><span class="text-sky-500">English</span> is <span>Easy</span></h2>
-    <p class="font-bangla">
-        আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br> আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ
-    </p>
-</div>
-<div class="image flex-1">
-    <img src="assets/hero-student.png" alt="">
-</div>
 </section>
 
+<!-- VOCABULARY SECTION -->
+<section id="vocabulary" class="py-20 px-6 lg:px-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-10">
+      <p class="text-sm font-semibold text-purple-600 uppercase tracking-widest mb-2">Interactive Cards</p>
+      <h2 class="text-4xl font-extrabold section-title">Let's Learn <span>Vocabularies</span></h2>
+      <p class="text-gray-400 mt-3">Click a card to reveal the Bangla meaning</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="flex flex-wrap gap-2 justify-center mb-10" id="tab-group">
+      <button class="tab-btn active px-5 py-2 text-sm font-semibold border border-purple-200 transition-all" data-filter="all" onclick="filterCards('all',this)">All</button>
+      <button class="tab-btn px-5 py-2 text-sm font-semibold border border-purple-200 rounded-full transition-all bg-white text-gray-600" data-filter="adjective" onclick="filterCards('adjective',this)">Adjectives</button>
+      <button class="tab-btn px-5 py-2 text-sm font-semibold border border-purple-200 rounded-full transition-all bg-white text-gray-600" data-filter="verb" onclick="filterCards('verb',this)">Verbs</button>
+      <button class="tab-btn px-5 py-2 text-sm font-semibold border border-purple-200 rounded-full transition-all bg-white text-gray-600" data-filter="noun" onclick="filterCards('noun',this)">Nouns</button>
+    </div>
+
+    <!-- Vocab Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="vocab-grid"></div>
+
+    <div class="text-center mt-10">
+      <button class="btn btn-outline border-purple-400 text-purple-700 hover:bg-purple-50 px-10" onclick="loadMoreCards()">Load More Words</button>
+    </div>
+  </div>
+</section>
+
+<!-- LESSONS SECTION -->
+<section id="lessons" class="py-20 px-6 lg:px-20 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-purple-600 uppercase tracking-widest mb-2">Structured Learning</p>
+      <h2 class="text-4xl font-extrabold section-title">Your Learning <span>Path</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card bg-gradient-to-br from-purple-50 to-indigo-100 shadow-sm border border-purple-100 word-card">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-3" style="background:#6C3FEB">📖</div>
+          <h3 class="card-title text-lg font-bold">Beginner</h3>
+          <p class="text-gray-500 text-sm">Alphabet, basic greetings, numbers and simple sentences.</p>
+          <div class="mt-4">
+            <div class="flex justify-between text-xs text-gray-500 mb-1"><span>Progress</span><span>12/20 Lessons</span></div>
+            <progress class="progress" value="60" max="100" style="accent-color:#6C3FEB"></progress>
+          </div>
+          <button class="btn btn-sm mt-4 text-white w-full" style="background:#6C3FEB">Continue →</button>
+        </div>
+      </div>
+      <div class="card bg-gradient-to-br from-orange-50 to-amber-100 shadow-sm border border-orange-100 word-card">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-3 bg-orange-500">💬</div>
+          <h3 class="card-title text-lg font-bold">Intermediate</h3>
+          <p class="text-gray-500 text-sm">Tenses, vocabulary building and everyday conversations.</p>
+          <div class="mt-4">
+            <div class="flex justify-between text-xs text-gray-500 mb-1"><span>Progress</span><span>3/20 Lessons</span></div>
+            <progress class="progress progress-warning" value="15" max="100"></progress>
+          </div>
+          <button class="btn btn-sm mt-4 bg-orange-500 text-white w-full border-none">Start →</button>
+        </div>
+      </div>
+      <div class="card bg-gradient-to-br from-green-50 to-emerald-100 shadow-sm border border-green-100 word-card">
+        <div class="card-body">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-3 bg-emerald-500">🎓</div>
+          <h3 class="card-title text-lg font-bold">Advanced</h3>
+          <p class="text-gray-500 text-sm">Business English, IELTS prep and fluent speaking.</p>
+          <div class="mt-4">
+            <div class="flex justify-between text-xs text-gray-500 mb-1"><span>Progress</span><span>0/20 Lessons</span></div>
+            <progress class="progress progress-success" value="0" max="100"></progress>
+          </div>
+          <button class="btn btn-sm mt-4 bg-emerald-500 text-white w-full border-none">Unlock →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="py-20 px-6 lg:px-20 bg-gray-50">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-purple-600 uppercase tracking-widest mb-2">Got Questions?</p>
+      <h2 class="text-4xl font-extrabold section-title"><span>Frequently</span> Asked Questions</h2>
+    </div>
+    <div class="space-y-4" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-400 py-12 px-6 lg:px-20">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-8">
+    <div>
+      <span class="text-white font-bold text-xl">English<span style="color:#a78bfa">Janala</span></span>
+      <p class="mt-2 text-sm max-w-xs">Making English learning simple, fun, and accessible for everyone in Bangladesh.</p>
+    </div>
+    <div class="flex gap-16 text-sm">
+      <div><p class="text-white font-semibold mb-3">Learn</p>
+        <ul class="space-y-2"><li><a href="#" class="hover:text-white">Vocabulary</a></li><li><a href="#" class="hover:text-white">Grammar</a></li><li><a href="#" class="hover:text-white">Speaking</a></li></ul>
+      </div>
+      <div><p class="text-white font-semibold mb-3">Support</p>
+        <ul class="space-y-2"><li><a href="#faq" class="hover:text-white">FAQ</a></li><li><a href="#" class="hover:text-white">Contact</a></li><li><a href="#" class="hover:text-white">Privacy</a></li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-xs text-gray-600 mt-10">© 2025 EnglishJanala. All rights reserved.</div>
+</footer>
+
+<!-- DEMO MODAL -->
+<dialog id="demo-modal" class="modal">
+  <div class="modal-box max-w-lg">
+    <h3 class="font-bold text-xl mb-4">Watch a Quick Demo</h3>
+    <div class="bg-purple-50 rounded-xl p-8 text-center text-gray-400">
+      <div class="text-6xl mb-4">▶️</div>
+      <p>Demo video would appear here.</p>
+    </div>
+    <div class="modal-action"><form method="dialog"><button class="btn">Close</button></form></div>
+  </div>
+</dialog>
+
+<!-- WORD DETAIL MODAL -->
+<dialog id="word-modal" class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-2xl mb-1" id="modal-word">Word</h3>
+    <p class="text-purple-600 font-medium mb-1" id="modal-type">Type</p>
+    <p class="text-gray-500 italic mb-4" id="modal-phonetic">/phonetic/</p>
+    <div class="divider"></div>
+    <p class="font-semibold text-gray-700 mb-1">Bangla Meaning:</p>
+    <p class="text-lg font-bold text-purple-700 mb-4" id="modal-bangla">—</p>
+    <p class="font-semibold text-gray-700 mb-1">Example:</p>
+    <p class="text-gray-600 italic" id="modal-example">—</p>
+    <div class="modal-action"><form method="dialog"><button class="btn btn-sm" style="background:#6C3FEB;color:#fff">Got it!</button></form></div>
+  </div>
+</dialog>
+<script src="script.js"></script>
 </body>
 </html>

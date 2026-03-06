@@ -3,11 +3,69 @@
 
 
 
-* {
-    font-family: "poppins", sans-serif;
 
-}
-.font-bangla{
+
+
+font-bangla{
     
   font-family: "Hind Siliguri", sans-serif;
 }
+
+  :root {
+      --primary: #6C3FEB;
+      --accent: #FF6B35;
+    }
+    body { font-family: 'Poppins', sans-serif; }
+    .hero-blob {
+      background: radial-gradient(ellipse at 60% 40%, #e0d4ff 0%, #f0f4ff 60%, transparent 100%);
+    }
+    .word-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .word-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(108,63,235,0.18);
+    }
+    .tab-btn.active {
+      background: #6C3FEB;
+      color: #fff;
+      border-radius: 9999px;
+    }
+    .flip-card { perspective: 900px; cursor: pointer; }
+    .flip-card-inner {
+      transition: transform 0.55s cubic-bezier(.4,2,.6,1);
+      transform-style: preserve-3d;
+      position: relative; height: 100%;
+    }
+    .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+    .flip-front, .flip-back {
+      backface-visibility: hidden;
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      border-radius: 1rem; padding: 1.5rem;
+    }
+    .flip-back { transform: rotateY(180deg); background: #6C3FEB; color: #fff; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px; background: #6C3FEB;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(24px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.7s ease both; }
+    .fade-up-2 { animation: fadeUp 0.7s 0.15s ease both; }
+    .fade-up-3 { animation: fadeUp 0.7s 0.3s ease both; }
+    .section-title span { color: #6C3FEB; }
+    .faq-item details summary { cursor: pointer; list-style: none; }
+    .faq-item details summary::-webkit-details-marker { display: none; }
+    .faq-item details[open] summary .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.3s; }
+    .progress-ring circle { transition: stroke-dashoffset 0.6s ease; }
+    .hero-img-wrap {
+      background: radial-gradient(circle at 50% 50%, #c4b0ff 0%, #ddd6fe 60%, transparent 100%);
+    }
